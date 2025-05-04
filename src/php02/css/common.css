@@ -1,0 +1,19 @@
+/* ヘッダー部分のcss */
+/* index.phpdeで編集したclass=の後につけたクラス名に対応させる */
+.header {
+  background: #000;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 1230px;
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  /* 文字に線を引くプロパティ、noneは初期値 */
+  font-weight: bold;
+  font-size: 24px;
+}
