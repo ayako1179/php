@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="result.php" method="post">
+    お名前：<input type="text" name="my_name" />
+    <!-- type="text"→文字を入力するテキストボックス -->
+    <!-- name="my_name"この入力欄に名前を付けてる。送信時にこの名前でデータが飛んでくる -->
+    <!-- ユーザーが自分で入力する前提、最初から何も入っていない状態で出したいので、valueは省略 -->
+    <br>
+    ご希望商品：
+    <!-- ラジオボタン -->
+    <input type="radio" name="choices" value="Aセット" />Aセット
+    <input type="radio" name="choices" value="Bセット" />Bセット
+    <input type="radio" name="choices" value="Cセット" />Cセット
+    <!-- type="radio"→1つだけ選べる選択肢 -->
+    <!-- name="choices"→全て同じ名前にしておくことで「どれか1つだけ選ばせる」ようになる -->
+     <!-- value="Aセット"→選ばれた時に送られる実際の値 -->
+    <br>
+    注文数：
+    <input type="number" name="number" value="">
+    <!-- type="number"→数字のみ入力できるボックス -->
+    <!-- name="number"→この項目の名前。送信時にnumber=●●の形で送られる -->
+    <!-- value=""→空にしておくと「初期値なし」という意味になる(ユーザーが自由に入力) -->
+    <input type="submit" value="送信" />
+    <!-- 押すとフォームがresult.phpに送信される -->
+  </form>
+</body>
+<!-- inputタグ -->
+ <!-- <input type="部品の種類" name="部品の名前" value="初期値/送信されるデータ/ボタンのラベル"> -->
+
+  <!-- name属性は部品の名前を指定する -->
+  <!-- この名前はユーザーが送信した値を取り出すときに必要になる -->
+  <!-- value属性はその入力欄に「最初から表示させておく値」を指定するもの -->
+  <!-- 空の状態は、ユーザーがページを開いたとき、何も入力されてない状態で表示される -->
+
+</html>

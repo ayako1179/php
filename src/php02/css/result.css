@@ -1,0 +1,81 @@
+/* resrlt.phpのcss */
+/* 世界時計アプリで使用するデザイン部分 */
+/* カードUI */
+/* 画像と国名、時間をpositionを利用して、表示させている */
+
+/* 全体の外枠 */
+.result__content {
+  margin: 0 auto;
+  padding: 60px 15px;
+  max-width: 1230px;
+  /* 全体を中央に配置 */
+  /* 上下に余白 */
+  /* 最大幅を1230pxに固定 */
+}
+
+/* 全体を横並びにする枠 */
+/* 複数のカードを横並びにする */
+.result-cards {
+  display: flex;
+  justify-content: center;
+  /* Flexboxでカードを横並び */
+  /* 中央にそろえる */
+}
+
+/* 1枚のカードのスタイル */
+/* 各カードのボックスデザイン */
+.result-card {
+  margin: 0 20px;
+  width: 360px;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+  /* 両サイドに20pxの余白 */
+  /* 幅360px固定 */
+  /* カードっぽく浮かせる影 */
+  /* 角をちょっと丸くする */
+}
+
+/* 画像の比率固定用 */
+/* 画像のアスペクト比をキープする */
+/* カード内に表示する画像の枠(入れ物)部分 */
+.result-card__img-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  /* 高さを幅の56.25%にすることで、画像の比率を固定する */
+}
+/* 画像の比率を16:9に固定するためのテクニック */
+/* 56.25% = 9 ÷ 16 × 100 */
+/* 中に入れる画像を絶対配置で上下中央にぴったり合わせる準備 */
+
+/* 画像本体 */
+/* 画像自体を上下中央にフィット */
+/* .result-card__img-wrapperの中 */
+.result-card__img {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+}
+/* translateY(-50%)→高さの半分だけ上にずらすことで、完全中央に */
+
+/* テキスト部分 */
+/* テキスト部分の横並びエリア */
+.result-card__body {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+/* 画像の下の部分、テキストエリア */
+/* Flexboxで横並びにして、左右に都市名と時刻を配置 */
+/* space-betweenで両端にピシッと配置 */
+
+/* 都市名、時間 */
+/* テキストの整え＆表示用 */
+.result-card__city,
+.result-card__time {
+  margin: 0;
+  font-size: 18px;
+}
+/* テキストのマージンをなくして、余計なズレ防止 */
+/* フォントサイズを18pxにしてちょっと大きめ＆見やすく */
